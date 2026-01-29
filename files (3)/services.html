@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services - Desiree Glatthardt. Strategic design, product strategy, growth design, and more.">
+    <title>Services - Desiree Glatthardt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+                :root {
+            /* Background Colors */
+            --bg-primary: #F5F2EB;
+            --bg-secondary: #F5EBFF;
+            --bg-tertiary: #F0F7FF;
+            
+            /* Text Colors */
+            --text-dark: #2D2D2D;
+            --text-gray: #666666;
+            --text-light: #999999;
+            
+            /* Primary Accent - Purple Pastel */
+            --accent-primary: #9B6BBD;
+            
+            /* Secondary Pastels */
+            --accent-orange: #FFB366;
+            --accent-blue: #4DB8FF;
+            --accent-pink: #FF6BA3;
+            --accent-green: #4DCC4D;
+            --accent-yellow: #FFFF00;
+            --accent-red: #FF6666;
+            --accent-turquoise: #00E6FF;
+            
+            /* Neutral */
+            --border-color: #E8E0D8;
+            --white: #FFFFFF;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: rgba(250, 248, 243, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 7vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            color: var(--text-dark);
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-pink));
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(201, 181, 232, 0.3);
+        }
+
+        /* Section */
+        .section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            letter-spacing: -0.01em;
+        }
+
+        .section-intro p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        /* Core Services */
+        .core-services {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .service-group {
+            background: white;
+            border: 1.5px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 12px;
+        }
+
+        .service-group h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .service-group p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-group ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .service-group li {
+            padding: 0.8rem 0;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .service-group li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-primary);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Packages Section */
+        .packages-section {
+            background: var(--bg-tertiary);
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .packages-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .package-card {
+            background: white;
+            border: 1.5px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: left;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+
+        .package-card:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-5px);
+        }
+
+        .package-card.featured {
+            border: 2px solid var(--accent-primary);
+            background: var(--white);
+            transform: scale(1.05);
+        }
+
+        .package-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        .package-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-pink));
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .package-goal {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .package-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .package-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .package-card ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .package-card li {
+            padding: 0.6rem 0;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .package-card li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-primary);
+            font-weight: bold;
+        }
+
+        .package-price {
+            font-size: 1.4rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 1.5rem 0;
+        }
+
+        .package-cta {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        /* Process Section */
+        .process-section {
+            background: white;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .process-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-card {
+            text-align: left;
+        }
+
+        .process-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--accent-pink), var(--accent-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .process-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .process-card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Why Section */
+        .why-section {
+            background: var(--bg-secondary);
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .why-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-card {
+            background: white;
+            border: 1.5px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 3px solid var(--accent-primary);
+        }
+
+        .why-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .why-card p {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* FAQs */
+        .faq-section {
+            background: white;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-grid {
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+            cursor: pointer;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-dark);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.2s ease;
+            color: var(--accent-primary);
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            color: var(--text-gray);
+            transition: max-height 0.2s ease;
+            margin-top: 1rem;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+            color: var(--text-dark);
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            color: var(--text-gray);
+            font-weight: 400;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .footer-section a {
+            display: block;
+            color: var(--text-gray);
+            text-decoration: none;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .package-card.featured {
+                transform: scale(1);
+            }
+
+            .package-card.featured:hover {
+                transform: translateY(-5px);
+            }
+
+            .service-group ul {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    
+        /* Colorful Card Rotation */
+        .related-card:nth-child(3n+1) {
+            border-color: #FFB366 !important;
+        }
+        
+        .related-card:nth-child(3n+2) {
+            border-color: #4DB8FF !important;
+        }
+        
+        .related-card:nth-child(3n) {
+            border-color: #FF6BA3 !important;
+        }
+        
+        .related-card:nth-child(3n+1):hover {
+            border-color: #9B6BBD !important;
+        }
+        
+        .related-card:nth-child(3n+2):hover {
+            border-color: #9B6BBD !important;
+        }
+        
+        .related-card:nth-child(3n):hover {
+            border-color: #9B6BBD !important;
+        }
+        
+        /* Service Cards Colors */
+        .service-card:nth-child(3n+1) {
+            --card-color: #FFB366;
+        }
+        
+        .service-card:nth-child(3n+2) {
+            --card-color: #4DB8FF;
+        }
+        
+        .service-card:nth-child(3n) {
+            --card-color: #FF6BA3;
+        }
+        
+        /* Package Cards */
+        .package-card:nth-child(2) {
+            border: 2px solid #9B6BBD !important;
+            background: #F5EBFF !important;
+        }
+        
+        /* FAQ Toggle Colors */
+        .faq-toggle:nth-child(odd) {
+            color: #FFB366;
+        }
+        
+        .faq-toggle:nth-child(even) {
+            color: #4DB8FF;
+        }
+
+    
+        /* Responsive Grid Adjustments */
+        @media (max-width: 1200px) {
+            .service-group-grid,
+            .package-grid,
+            .faq-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .service-group-grid,
+            .package-grid,
+            .why-grid,
+            .faq-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+    
+        /* Service Group Items Responsive */
+        @media (max-width: 1200px) {
+            .service-group ul {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="nav-logo">Desiree Glatthardt</a>
+        <ul class="nav-links">
+            <li><a href="/#work">Work</a></li>
+            <li><a href="/#approach">Approach</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/#voice">Voice</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Get strategic UX & product design without the agency price tag.</h1>
+            <p class="hero-description">I can help you transform your digital product with expert UX design. Let's create something cool together.</p>
+            <a href="#packages" class="btn btn-primary">View packages</a>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section class="section">
+        <h2>Core design services</h2>
+        
+        <div class="core-services">
+            <div class="service-group">
+                <h3>🔍 Goal: Diagnose & Discover</h3>
+                <p>Understand where your product stands and what users really need.</p>
+                <ul>
+                    <li>Usability check – Find out what's confusing your users</li>
+                    <li>Experience audit – Get a detailed review with actionable fixes</li>
+                    <li>Customer feedback – Learn directly from your customers</li>
+                    <li>Competitive comparison – See how you stack up against others</li>
+                </ul>
+            </div>
+
+            <div class="service-group">
+                <h3>🎨 Goal: Improve & Redesign</h3>
+                <p>Transform your product with strategic design improvements.</p>
+                <ul>
+                    <li>Website refresh (Basic & Full) – From light updates to full redesigns</li>
+                    <li>Visual updates – Modernize the look and feel</li>
+                    <li>Customer journey improvements – Make navigation easier and engagement stronger</li>
+                    <li>Screen designs – Professional, polished page designs</li>
+                </ul>
+            </div>
+
+            <div class="service-group">
+                <h3>📈 Goal: Test & Scale</h3>
+                <p>Validate designs and accelerate growth through data-driven decisions.</p>
+                <ul>
+                    <li>Landing pages that convert – Pages that drive action</li>
+                    <li>Growth-focused design – Boost leads, sales, or sign-ups</li>
+                    <li>Prototyping & testing – Gather real user feedback</li>
+                    <li>Consistent look & feel – Ensure everything stays polished and on-brand</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="packages-section" id="packages">
+        <div class="packages-content">
+            <h2>Packages and rates</h2>
+            <p>Choose the right fit for your project and budget.</p>
+
+            <div class="packages-grid">
+                <!-- Package 1 -->
+                <div class="package-card">
+                    <div class="package-goal">Quick wins</div>
+                    <h3>UX Audit & Research</h3>
+                    <p>Perfect for getting quick insights and actionable recommendations.</p>
+                    <ul>
+                        <li>UX Audit with recommendations</li>
+                        <li>Research Study</li>
+                        <li>Rapid design experiments</li>
+                        <li>Delivered in 1-2 weeks</li>
+                    </ul>
+                    <div class="package-price">Starting at $2.5k</div>
+                    <a href="/cdn-cgi/l/email-protection#b4d0d1d199c4c7f4dcdbc0d9d5ddd89ad7dbd9" class="btn btn-primary package-cta">Let's chat</a>
+                </div>
+
+                <!-- Package 2 - Featured -->
+                <div class="package-card featured">
+                    <div class="package-badge">Most popular</div>
+                    <div class="package-goal">Complete redesign</div>
+                    <h3>Redesign Packages</h3>
+                    <p>Full UX process with research, testing, and validated designs.</p>
+                    <ul>
+                        <li>Essentials – Lean approach using existing data</li>
+                        <li>Comprehensive – Full process with research & testing</li>
+                        <li>Design systems & documentation</li>
+                        <li>3-4 month timeline</li>
+                    </ul>
+                    <div class="package-price">Starting at $5k</div>
+                    <a href="/cdn-cgi/l/email-protection#0b6f6e6e267b784b63647f666a626725686466" class="btn btn-primary package-cta">Let's chat</a>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="package-card">
+                    <div class="package-goal">Long-term</div>
+                    <h3>Ongoing Support</h3>
+                    <p>Continuous design strategy and support as your product evolves.</p>
+                    <ul>
+                        <li>UX Retainer</li>
+                        <li>Ongoing strategy + design support</li>
+                        <li>Hourly support for smaller needs</li>
+                        <li>Flexible and scalable</li>
+                    </ul>
+                    <div class="package-price">Custom pricing</div>
+                    <a href="/cdn-cgi/l/email-protection#600405054d101320080f140d01090c4e030f0d" class="btn btn-primary package-cta">Let's chat</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process-section">
+        <div class="process-content">
+            <h2>What it's like to work with me</h2>
+            <p>A simple, transparent process designed for collaboration and results.</p>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <h3>Discovery Call</h3>
+                    <p>We start with a free 30-minute call to discuss your needs, goals, and project scope.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <h3>Proposal & Scope</h3>
+                    <p>I'll create a detailed Scope of Work outlining deliverables, timelines, and pricing.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <h3>Kickoff & Execution</h3>
+                    <p>Once approved, we begin the project with clear check-ins and milestones.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <h3>Collaboration</h3>
+                    <p>I keep you involved throughout, gathering feedback at key phases for alignment.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-number">05</div>
+                    <h3>Delivery & Support</h3>
+                    <p>Final deliverables handoff with documentation. Ongoing support available if needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Me -->
+    <section class="why-section">
+        <div class="why-content">
+            <h2>Why work with me?</h2>
+
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>Tailored, business-driven UX</h3>
+                    <p>Not just aesthetics—real impact on engagement & conversion. Every decision connects to your business goals.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Efficiency & flexibility</h3>
+                    <p>No bloated agency processes, no junior hand-offs. Direct, honest collaboration at every stage.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Strategic guidance</h3>
+                    <p>I don't just execute—I help you make smarter UX decisions based on data and user insights.</p>
+                </div>
+                <div class="why-card">
+                    <h3>A true partner</h3>
+                    <p>I collaborate, adapt, and find the right solutions for your budget & goals. Your success is my success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faq-section">
+        <div class="section">
+            <h2>Frequently asked questions</h2>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I know which service is right for me?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It depends on where you are in your product journey. Quick UX Wins if you need fast insights, Redesign Packages if you're ready for a full overhaul, and Ongoing Support if you want continuous guidance. I'm happy to chat about the best fit.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How does payment work?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For projects, I typically ask for an initial deposit (usually 30-50%) upon approval of the Scope of Work. The remainder is due upon delivery. For retainers, payment is typically monthly or as agreed.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        I have a limited budget—can I still work with you?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. I offer Quick UX Wins packages starting at $2.5k, and I can customize the scope to fit your budget. Let's chat about what's possible within your constraints.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Why does UX cost this much?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Good UX is an investment that drives business results. The cost includes strategy, research, design, testing, and iteration. You're not just paying for pretty screens—you're paying for solutions that increase conversions, retention, and user satisfaction.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What's the timeline for a typical project?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Quick UX Wins: 1-2 weeks. Redesign Packages: 3-4 months. Depends on scope and complexity. I always prioritize quality over rushing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you do branding or coding?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>My focus is UX/product design and strategy. I work closely with developers and brand teams, but I don't do branding or development work directly. I can recommend trusted partners if needed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to improve your product's UX?</h2>
+        <p>Whether you need quick insights, a full redesign, or ongoing support—I'm here to help you create a product your users love.</p>
+        <div class="cta-buttons">
+            <a href="/cdn-cgi/l/email-protection#513534347c212211393e253c30383d7f323e3c" class="btn btn-primary">Get in touch</a>
+            <a href="https://calendly.com" class="btn btn-primary">Book a free discovery call</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <a href="/">Home</a>
+                <a href="/#work">Work</a>
+                <a href="/services.html">Services</a>
+                <a href="/#voice">Voice</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <a href="https://www.linkedin.com/in/desireeps/">LinkedIn</a>
+                <a href="/cdn-cgi/l/email-protection#4e2a2b2b633e3d0e26213a232f2722602d2123">Email</a>
+                <a href="https://medium.com">Medium</a>
+            </div>
+            <div class="footer-section">
+                <h4>More</h4>
+                <a href="/#approach">My Approach</a>
+                <a href="/services.html">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 – Desiree Glatthardt. Crafting impactful design solutions with empathy and strategy.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5
